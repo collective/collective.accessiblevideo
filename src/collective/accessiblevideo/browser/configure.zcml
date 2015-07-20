@@ -17,4 +17,14 @@
         directory="static"
         />
 
+    <!-- Accessible Video View -->
+    <browser:page
+        name="view"
+        permission="zope2.View"
+        for="collective.accessiblevideo.contents.accessible_video.IAccessibleVideo"
+        class=".view.AccessibleVideoView"
+        template="templates/accessible_video.pt"
+        layer="collective.accessiblevideo.interfaces.ICollectiveAccessiblevideoLayer"
+    />
+
 </configure>
