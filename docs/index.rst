@@ -1,0 +1,5 @@
+====================
+collective.accessiblevideo
+====================
+
+User documentation
