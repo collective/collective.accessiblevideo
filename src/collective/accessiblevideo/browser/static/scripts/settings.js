@@ -86,22 +86,22 @@ complete with your server paths
 */
 var uiControls = {
 	playControl: {
-		play: 'client/images/play.png',
-		pause: 'client/images/pause.png'
+		play: '++resource++collective.accessiblevideo/images/play.png',
+		pause: '++resource++collective.accessiblevideo/images/pause.png'
 	},
-	captionsControl: 'client/images/captions.png',
-	configControl: 'client/images/config.png',
-	audiodescriptionControl: 'client/images/audiodescription.png',
-	transcriptControl: 'client/images/transcript.png',
+	captionsControl: '++resource++collective.accessiblevideo/images/captions.png',
+	configControl: '++resource++collective.accessiblevideo/images/config.png',
+	audiodescriptionControl: '++resource++collective.accessiblevideo/images/audiodescription.png',
+	transcriptControl: '++resource++collective.accessiblevideo/images/transcript.png',
 	muteControl: {
-		mute: 'client/images/mute.png',
-		unmute: 'client/images/unmute.png'
+		mute: '++resource++collective.accessiblevideo/images/mute.png',
+		unmute: '++resource++collective.accessiblevideo/images/unmute.png'
 	},
 	fullscreenControl: {
-		fullscreen: 'client/images/fullscreen.png',
-		nonfullscreen: 'client/images/nonfullscreen.png'
+		fullscreen: '++resource++collective.accessiblevideo/images/fullscreen.png',
+		nonfullscreen: '++resource++collective.accessiblevideo/images/nonfullscreen.png'
 	},
-	closeControl: 'client/images/close.png'
+	closeControl: '++resource++collective.accessiblevideo/images/close.png'
 };
 /* Set Captions configuration*/
 // Default font-size

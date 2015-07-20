@@ -6,7 +6,7 @@ from plone.namedfile.field import NamedBlobFile
 from collective.accessiblevideo import _
 
 
-class ITranscript(model.Schema):
+class ICaption(model.Schema):
 
     title = schema.TextLine(
         title=_(u"Title"),
@@ -19,6 +19,12 @@ class ITranscript(model.Schema):
     )
 
     file = NamedBlobFile(
-        title=_(u"Transcript file"),
+        title=_(u"Caption"),
+        required=True,
+    )
+
+    language = schema.TextLine(
+        title=_(u"Language"),
+        description=_(u"Language of the caption (e.g.: \"en\")"),
         required=True,
     )

@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
-<object name="Subtitle" meta_type="Dexterity FTI" i18n:domain="collective.accessiblevideo"
+<object name="Caption" meta_type="Dexterity FTI" i18n:domain="collective.accessiblevideo"
    xmlns:i18n="http://xml.zope.org/namespaces/i18n">
-  <property name="title" i18n:translate="">Subtitle</property>
+  <property name="title" i18n:translate="">Caption</property>
   <property name="description"
-    i18n:translate="">A subtitle for an accessible video.</property>
+    i18n:translate="">A caption for an accessible video.</property>
   <property name="icon_expr"></property>
-  <property name="factory">Subtitle</property>
-  <property name="add_view_expr">string:${folder_url}/++add++Subtitle</property>
+  <property name="factory">Caption</property>
+  <property name="add_view_expr">string:${folder_url}/++add++Caption</property>
   <property name="link_target"></property>
   <property name="immediate_view">view</property>
   <property name="global_allow">False</property>
@@ -24,7 +24,7 @@
   <property name="behaviors">
     <element value="plone.app.content.interfaces.INameFromTitle"/>
   </property>
-  <property name="schema">collective.accessiblevideo.contents.subitle.ISubtitle</property>
+  <property name="schema">collective.accessiblevideo.contents.caption.ICaption</property>
   <property name="model_source"></property>
   <property name="model_file"></property>
   <alias from="(Default)" to="(dynamic view)"/>

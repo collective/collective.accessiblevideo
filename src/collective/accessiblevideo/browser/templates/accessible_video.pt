@@ -6,12 +6,67 @@
       metal:use-macro="context/main_template/macros/master"
       i18n:domain="plone">
 
+<head>
+
+  <metal:block fill-slot="style_slot">
+    <!-- VideoJS -->
+    <link rel="stylesheet" href="++resource++collective.accessiblevideo/scripts/video-js/video-js.css" type="text/css" />
+    <!-- Personnalisation -->
+    <link rel="stylesheet" href="++resource++collective.accessiblevideo/styles/styles.css" type="text/css" />
+  </metal:block>
+
+  <metal:block fill-slot="javascript_head_slot">
+    <!-- Internationalisation, images de l'interface et couleurs (paramètres des sous-titres) -->
+    <script src="++resource++collective.accessiblevideo/scripts/settings.js" type="text/javascript"></script>
+    <!-- Fork VideoJS -->
+    <script src="++resource++collective.accessiblevideo/scripts/video-js/video.dev.js" type="text/javascript"></script>
+    <!-- Fonctions liées aux paramètres des sous-titres -->
+    <script src="++resource++collective.accessiblevideo/scripts/subtitles.js" type="text/javascript"></script>
+    <!-- Utilisation de VideoJS -->
+    <script type="text/javascript">
+        window.addEventListener('DOMContentLoaded', function(event) {
+            videojs(video.getAttribute('id'), { preload: 'auto' }, function () {
+                this.addClass('video-js');
+                this.addClass('vjs-default-skin');
+            });
+        }, false);
+    </script>
+  </metal:block>
+</head>
+
 <body>
 
 <metal:content-core fill-slot="content-core">
+  <metal:content-core define-macro="content-core">
 
-TODO
+    <div id="player">
+        <video id="video" controls="controls" height="480" width="640">
+            <source tal:condition="context/video_mp4"
+                tal:attributes="src string:${context/absolute_url}/@@download/video_mp4"
+                src="" type="video/mp4" />
+            <source tal:condition="context/video_webm"
+                tal:attributes="src string:${context/absolute_url}/@@download/video_webm"
+                src="" type="video/webm" />
+            <source tal:condition="context/video_ogg"
+                tal:attributes="src string:${context/absolute_url}/@@download/video_ogg"
+                src="" type="video/ogg" />
+            <track tal:repeat="caption view/get_captions"
+                tal:attributes="label caption/label; src caption/src; srclang caption/lang"
+                kind="captions" label="" src="" srclang="" />
+            <ul tal:define="transcripts view/get_transcripts" tal:condition="transcripts" class="transcriptlist">
+              <li tal:repeat="transcript transcripts">
+                <a tal:attributes="href transcript/src; title transcript/title"
+                   tal:content="transcript/title"
+                   href="" title="">Transcript</a>
+              </li>
+            </ul>
+        </video>
+        <audio tal:condition="context/audio_description"
+            tal:attributes="src string:${context/absolute_url}/@@download/audio_description"
+            src="" preload="auto" hidden="hidden"></audio>
+    </div>
 
+  </metal:content-core>
 </metal:content-core>
 </body>
 </html>
