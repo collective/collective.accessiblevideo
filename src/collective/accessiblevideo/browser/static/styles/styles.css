@@ -57,6 +57,17 @@ overflow: hidden;
 	text-align: center;
 }
 
+#player a {
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  font-style: inherit;
+  font-variant: inherit;
+  font-weight: inherit;
+  text-transform: inherit;
+  text-decoration: none;
+}
+
 button[data-hexa] {
 	background-color: transparent;
 	border: solid 2px transparent;
@@ -219,10 +230,15 @@ button[data-hexa] img {
 	margin:0;
 	padding:0 0 0 10px;
 }
+.transcriptpan ul li {
+	list-style: none;
+}
+
 .transcriptpan ul li a:hover,
 .transcriptpan ul li a:focus{
 	color:yellow;
 }
+
 .vjs-default-skin .vjs-control-bar {
 	padding-top: 1px; /* Améliore la visibilité du outline */
 }
