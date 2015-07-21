@@ -16,7 +16,7 @@
   </metal:block>
 
   <metal:block fill-slot="javascript_head_slot">
-    <!-- Internationalisation, images de l'interface et couleurs (paramètres des sous-titres) -->
+    <!-- Internationalisation, images de l'interface et couleurs (paramètres des sous-titres) Default Settings -->
     <script src="++resource++collective.accessiblevideo/scripts/settings.js" type="text/javascript"></script>
     <!-- Fork VideoJS -->
     <script src="++resource++collective.accessiblevideo/scripts/video-js/video.dev.js" type="text/javascript"></script>
@@ -24,12 +24,17 @@
     <script src="++resource++collective.accessiblevideo/scripts/subtitles.js" type="text/javascript"></script>
     <!-- Utilisation de VideoJS -->
     <script type="text/javascript">
-        window.addEventListener('DOMContentLoaded', function(event) {
+        $(document).ready(function() {
+            var $video = $('#video');
+            defaultFontsize = parseInt($video.attr('data-default-font-size'));
+            defaultOpacity = parseInt($video.attr('data-default-opacity'));
+            colors = $.parseJSON($video.attr('data-colors'));
+
             videojs(video.getAttribute('id'), { preload: 'auto' }, function () {
                 this.addClass('video-js');
                 this.addClass('vjs-default-skin');
             });
-        }, false);
+        });
     </script>
   </metal:block>
 </head>
@@ -40,7 +45,13 @@
   <metal:content-core define-macro="content-core">
 
     <div id="player">
-        <video id="video" controls="controls" height="480" width="640">
+        <video tal:attributes="
+                data-default-font-size python:context.portal_registry['collective.accessiblevideo.defaultFontsize'];
+                data-default-opacity python:context.portal_registry['collective.accessiblevideo.defaultOpacity'];
+                data-colors python:context.portal_registry['collective.accessiblevideo.colors'];
+                "
+            data-default-font-size="" data-default-opacity="" data-colors=""
+            id="video" controls="controls" height="480" width="640">
             <source tal:condition="context/video_mp4"
                 tal:attributes="src string:${context/absolute_url}/@@download/video_mp4"
                 src="" type="video/mp4" />

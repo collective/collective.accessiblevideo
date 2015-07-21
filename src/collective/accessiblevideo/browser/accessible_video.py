@@ -1,8 +1,7 @@
 from Products.CMFCore.utils import getToolByName
 from Products.Five import BrowserView
+from plone.memoize.view import memoize
 
-from collective.accessiblevideo.contents.caption import ICaption
-from collective.accessiblevideo.contents.transcript import ITranscript
 
 class AccessibleVideoView(BrowserView):
 
@@ -18,6 +17,7 @@ class AccessibleVideoView(BrowserView):
             field
         )
 
+    @memoize
     def get_captions(self):
         captions = []
         brains = self.catalog(
@@ -33,6 +33,7 @@ class AccessibleVideoView(BrowserView):
             })
         return captions
 
+    @memoize
     def get_transcripts(self):
         transcripts = []
         brains = self.catalog(

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<registry>
+
+  <records interface="collective.accessiblevideo.interfaces.IAccessibleVideoSettings" prefix="collective.accessiblevideo">
+      <value key="defaultFontsize">20</value>
+      <value key="defaultOpacity">50</value>
+      <value key="colors">[
+            { "hexa": "ffff00", "name": "Jaune"},
+            { "hexa": "008000", "name": "Vert" },
+            { "hexa": "0000ff", "name": "Bleu" },
+            { "hexa": "ff0000", "name": "Rouge" },
+            { "hexa": "00ffff", "name": "Cyan" },
+            { "hexa": "ff00ff", "name": "Magenta" },
+            { "hexa": "000000", "name": "Noir", "defaultshadow": true },
+            { "hexa": "ffffff", "name": "Blanc", "defaultcolor": true }
+        ]</value>
+  </records>
+
+</registry>

@@ -22,7 +22,7 @@
         name="view"
         permission="zope2.View"
         for="collective.accessiblevideo.contents.accessible_video.IAccessibleVideo"
-        class=".view.AccessibleVideoView"
+        class=".accessible_video.AccessibleVideoView"
         template="templates/accessible_video.pt"
         layer="collective.accessiblevideo.interfaces.ICollectiveAccessiblevideoLayer"
     />
