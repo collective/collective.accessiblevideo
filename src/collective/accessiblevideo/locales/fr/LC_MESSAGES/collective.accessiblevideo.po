@@ -1,6 +1,3 @@
-# --- PLEASE EDIT THE LINES BELOW CORRECTLY ---
-# SOME DESCRIPTIVE TITLE.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -15,98 +12,98 @@ msgstr ""
 "Language-Code: en\n"
 "Language-Name: English\n"
 "Preferred-Encodings: utf-8 latin1\n"
-"Domain: collective.accessiblevideo\n"
+"Domain: DOMAIN\n"
 
 #: ../profiles/default/types/Caption.xml
 msgid "A caption for an accessible video."
-msgstr ""
+msgstr "Un sous-titre pour une vidéo accessbile."
 
 #: ../profiles/default/types/Transcript.xml
 msgid "A transcript for an accessible video."
-msgstr ""
+msgstr "Une transcription pour une vidéo accessible."
 
 #: ../profiles/default/types/AccessibleVideo.xml
 msgid "A video with possible subtitles, audio description and transcripts."
-msgstr ""
+msgstr "Une vidéo qui peut avoir des sous-titres, une description audio et des transcriptions."
 
 #: ../profiles/default/types/AccessibleVideo.xml
 msgid "AccessibleVideo"
-msgstr ""
+msgstr "Vidéo Accessible"
 
 #: ../contents/accessible_video.py:41
 msgid "Audio description"
-msgstr ""
+msgstr "Description audio"
 
 #: ../contents/accessible_video.py:42
 msgid "Audio description of the video."
-msgstr ""
+msgstr "Description audio de la vidéo"
 
 #: ../contents/caption.py:22
 #: ../profiles/default/types/Caption.xml
 msgid "Caption"
-msgstr ""
+msgstr "Sous-titre"
 
 #: ../interfaces.py:25
 msgid "Colors"
-msgstr ""
+msgstr "Couleurs"
 
 #: ../interfaces.py:17
 msgid "Default font size"
-msgstr ""
+msgstr "Taille de la police par défaut"
 
 #: ../interfaces.py:21
 msgid "Default opacity"
-msgstr ""
+msgstr "Opacité par défaut"
 
 #: ../contents/accessible_video.py:18
 #: ../contents/caption.py:17
 #: ../contents/transcript.py:17
 msgid "Description"
-msgstr ""
+msgstr "Description"
 
 #: ../contents/caption.py:27
 msgid "Language"
-msgstr ""
+msgstr "Langue"
 
 #: ../contents/caption.py:28
 msgid "Language of the caption (e.g.: \"en\")"
-msgstr ""
+msgstr "Langue du sous-titre (\"en\", ...)"
 
 #: ../contents/accessible_video.py:13
 #: ../contents/caption.py:12
 #: ../contents/transcript.py:12
 msgid "Title"
-msgstr ""
+msgstr "Titre"
 
 #: ../profiles/default/types/Transcript.xml
 msgid "Transcript"
-msgstr ""
+msgstr "Transcription"
 
 #: ../contents/transcript.py:22
 msgid "Transcript file"
-msgstr ""
+msgstr "Fichier de transcription"
 
 #: ../contents/accessible_video.py:24
 msgid "Video in the mpeg format."
-msgstr ""
+msgstr "Vidéo au format mpeg."
 
 #: ../contents/accessible_video.py:36
 msgid "Video in the ogg format."
-msgstr ""
+msgstr "Vidéo au format ogg."
 
 #: ../contents/accessible_video.py:30
 msgid "Video in the webm format."
-msgstr ""
+msgstr "Vidéo au format webm."
 
 #: ../contents/accessible_video.py:23
 msgid "mp4 Video"
-msgstr ""
+msgstr "Vidéo mp4"
 
 #: ../contents/accessible_video.py:35
 msgid "ogg Video"
-msgstr ""
+msgstr "Vidéo ogg"
 
 #: ../contents/accessible_video.py:29
 msgid "webm Video"
-msgstr ""
+msgstr "Vidéo webm"
 
