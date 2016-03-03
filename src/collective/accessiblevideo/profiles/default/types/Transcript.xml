@@ -23,6 +23,10 @@
   <property name="klass">plone.dexterity.content.Item</property>
   <property name="behaviors">
     <element value="plone.app.content.interfaces.INameFromTitle"/>
+    <element value="plone.app.dexterity.behaviors.exclfromnav.IExcludeFromNavigation"/>
+    <element value="plone.app.dexterity.behaviors.id.IShortName"/>
+    <element value="plone.app.dexterity.behaviors.metadata.IBasic"/>
+    <element value="plone.app.lockingbehavior.behaviors.ILocking" />
   </property>
   <property name="schema">collective.accessiblevideo.contents.transcript.ITranscript</property>
   <property name="model_source"></property>

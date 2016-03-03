@@ -9,16 +9,6 @@ from collective.accessiblevideo import _
 
 class IAccessibleVideo(model.Schema):
 
-    title = schema.TextLine(
-        title=_(u"Title"),
-        required=True,
-    )
-
-    description = schema.Text(
-        title=_(u"Description"),
-        required=False,
-    )
-
     video_mp4 = NamedBlobFile(
         title=_(u"mp4 Video"),
         description=_(u"Video in the mpeg format."),

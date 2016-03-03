@@ -8,16 +8,6 @@ from collective.accessiblevideo import _
 
 class ICaption(model.Schema):
 
-    title = schema.TextLine(
-        title=_(u"Title"),
-        required=True,
-    )
-
-    description = schema.Text(
-        title=_(u"Description"),
-        required=False,
-    )
-
     file = NamedBlobFile(
         title=_(u"Caption"),
         required=True,

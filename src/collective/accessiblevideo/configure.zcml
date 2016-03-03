@@ -9,6 +9,7 @@
 
     <i18n:registerTranslations directory="locales" />
 
+    <include package=".upgrades" />
     <include package=".browser" />
 
 
